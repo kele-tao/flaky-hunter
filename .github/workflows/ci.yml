@@ -16,6 +16,7 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest -q
+      - run: pytest -q --cov=flaky_hunter --cov-branch --cov-report=term
       - run: python -m flaky_hunter --help
       - run: python -m flaky_hunter analyze examples/results --color never
         continue-on-error: true

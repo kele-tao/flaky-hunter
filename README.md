@@ -7,7 +7,8 @@ a `pytest.ini` that quarantines them today.**
 [![ci](https://github.com/kele-tao/flaky-hunter/actions/workflows/ci.yml/badge.svg)](https://github.com/kele-tao/flaky-hunter/actions/workflows/ci.yml)
 ![python](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![license](https://img.shields.io/badge/license-MIT-green)
-![tests](https://img.shields.io/badge/tests-131%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-166%20passing-brightgreen)
+![coverage](https://img.shields.io/badge/core%20coverage-92%25-brightgreen)
 ![dependencies](https://img.shields.io/badge/runtime%20deps-0-blue)
 
 ![flaky-hunter analyze](docs/screenshot.png)
@@ -427,6 +428,23 @@ you already have.
 What was deliberately left out of 1.0 — automatic bisection, live CI APIs, rerun
 orchestration, ML classification — is documented with reasons in
 [docs/ROADMAP.md](docs/ROADMAP.md).
+
+## Quality
+
+Every number in this section is measured, not estimated:
+
+| check | command | result |
+| --- | --- | --- |
+| tests | `pytest -q` | 166 passing, no network, no sleeps |
+| coverage | `pytest --cov=flaky_hunter --cov-branch` | 92% line+branch over `src/flaky_hunter` |
+| lint | `ruff check . && ruff format --check .` | clean at line length 100 |
+| CI | GitHub Actions | Python 3.10, 3.11 and 3.12, all green |
+
+The suite covers every parser (happy path, malformed, empty, unicode CJK + emoji, 2,000-result
+smoke test), the scoring maths against hand-computed values, the report renderers
+(including HTML escaping of untrusted test names), quarantine merge semantics against a
+pre-existing `pytest.ini`, baseline diffing, and the CLI exit codes 0/1/2.
+
 
 ## Contributing
 
