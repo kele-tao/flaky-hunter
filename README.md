@@ -1,5 +1,7 @@
 # flaky-hunter
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Rerun your CI twice and it tells you which tests are lying to you: a ranked,
 statistically defensible list of flaky tests, the error signature they share, and
 a `pytest.ini` that quarantines them today.**
