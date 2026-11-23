@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="pytest" tests="25" failures="3" timestamp="2026-01-03T09:02:00Z">
+  <testcase classname="tests.test_api" name="test_fetch_times_out" time="28.564" />
+  <testcase classname="tests.test_api" name="test_retry_after_timeout" time="3.622" />
+  <testcase classname="tests.test_api" name="test_health_ok" time="0.038" />
+  <testcase classname="tests.test_api" name="test_pagination" time="0.114" />
+  <testcase classname="tests.test_api" name="test_rate_limit" time="0.227" />
+  <testcase classname="tests.test_api" name="test_upload_chunked" time="1.247" />
+  <testcase classname="tests.test_cache" name="test_eviction_race" time="0.530">
+    <failure message="KeyError: 'session:4711'">KeyError: 'session:4711'
+  (see logs/ci-3.txt)</failure>
+  </testcase>
+  <testcase classname="tests.test_cache" name="test_get_miss" time="0.010" />
+  <testcase classname="tests.test_cache" name="test_set_ttl" time="0.021" />
+  <testcase classname="tests.test_cache" name="test_lru_order" time="0.033" />
+  <testcase classname="tests.test_report" name="test_export_csv" time="0.853" />
+  <testcase classname="tests.test_report" name="test_export_pdf" time="1.348" />
+  <testcase classname="tests.test_report" name="test_render_table" time="0.049" />
+  <testcase classname="tests.test_report" name="test_column_alias" time="0.059" />
+  <testcase classname="tests.test_auth" name="test_legacy_login" time="0.401">
+    <failure message="AssertionError: token expired at 2025-12-31T23:59:59Z">AssertionError: token expired at 2025-12-31T23:59:59Z
+  (see logs/ci-3.txt)</failure>
+  </testcase>
+  <testcase classname="tests.test_auth" name="test_login_success" time="0.092" />
+  <testcase classname="tests.test_auth" name="test_login_bad_password" time="0.087" />
+  <testcase classname="tests.test_auth" name="test_token_refresh" time="0.103" />
+  <testcase classname="tests.test_auth" name="test_logout" time="0.052" />
+  <testcase classname="tests.test_metrics" name="test_flush_metrics" time="0.953">
+    <failure message="ConnectionRefusedError: [Errno 111] Connection refused 10.4.2.17:5432">ConnectionRefusedError: [Errno 111] Connection refused 10.4.2.17:5432
+  (see logs/ci-3.txt)</failure>
+  </testcase>
+  <testcase classname="tests.test_metrics" name="test_counter_inc" time="0.010" />
+  <testcase classname="tests.test_metrics" name="test_histogram_buckets" time="0.020" />
+  <testcase classname="tests.test_metrics" name="test_gauge_reset" time="0.022" />
+  <testcase classname="tests.test_db" name="test_migration_idempotent" time="2.842" />
+  <testcase classname="tests.test_db" name="test_transaction_rollback" time="0.408" />
+</testsuite>

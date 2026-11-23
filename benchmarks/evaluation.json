@@ -1,0 +1,90 @@
+{
+  "runs": 40,
+  "tests": 25,
+  "threshold": 0.2,
+  "primary": {
+    "flagged": 4,
+    "true_positive": [
+      "tests/test_api.py::test_fetch_times_out",
+      "tests/test_api.py::test_retry_after_timeout",
+      "tests/test_cache.py::test_eviction_race"
+    ],
+    "false_positive": [
+      "tests/test_metrics.py::test_flush_metrics"
+    ],
+    "false_negative": [],
+    "precision": 0.75,
+    "recall": 1.0
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.1,
+      "flagged": 4,
+      "precision": 0.75,
+      "recall": 1.0,
+      "false_positive": [
+        "tests/test_metrics.py::test_flush_metrics"
+      ]
+    },
+    {
+      "threshold": 0.15,
+      "flagged": 4,
+      "precision": 0.75,
+      "recall": 1.0,
+      "false_positive": [
+        "tests/test_metrics.py::test_flush_metrics"
+      ]
+    },
+    {
+      "threshold": 0.2,
+      "flagged": 4,
+      "precision": 0.75,
+      "recall": 1.0,
+      "false_positive": [
+        "tests/test_metrics.py::test_flush_metrics"
+      ]
+    },
+    {
+      "threshold": 0.25,
+      "flagged": 1,
+      "precision": 1.0,
+      "recall": 0.333,
+      "false_positive": []
+    },
+    {
+      "threshold": 0.3,
+      "flagged": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_positive": []
+    }
+  ],
+  "top4_by_impact": [
+    "tests/test_api.py::test_fetch_times_out",
+    "tests/test_api.py::test_retry_after_timeout",
+    "tests/test_metrics.py::test_flush_metrics",
+    "tests/test_cache.py::test_eviction_race"
+  ],
+  "all_truly_flaky_in_top4": true,
+  "regressed_detected": [
+    "tests/test_report.py::test_export_csv"
+  ],
+  "fixed_detected": [
+    "tests/test_auth.py::test_legacy_login"
+  ],
+  "signature_clusters": [
+    {
+      "size": 2,
+      "failures": 21,
+      "signature": "socket.timeout: connection to <host><path> timed out <timing>"
+    }
+  ],
+  "explains_false_positive": {
+    "pair": [
+      "tests/test_metrics.py::test_flush_metrics",
+      "tests/test_cache.py::test_eviction_race"
+    ],
+    "jaccard": 1.0,
+    "shared_runs": 11
+  }
+}

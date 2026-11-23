@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="pytest" tests="25" failures="0" timestamp="2026-01-26T09:25:00Z">
+  <testcase classname="tests.test_api" name="test_fetch_times_out" time="30.436" />
+  <testcase classname="tests.test_api" name="test_retry_after_timeout" time="3.107" />
+  <testcase classname="tests.test_api" name="test_health_ok" time="0.037" />
+  <testcase classname="tests.test_api" name="test_pagination" time="0.129" />
+  <testcase classname="tests.test_api" name="test_rate_limit" time="0.193" />
+  <testcase classname="tests.test_api" name="test_upload_chunked" time="1.273" />
+  <testcase classname="tests.test_cache" name="test_eviction_race" time="0.401" />
+  <testcase classname="tests.test_cache" name="test_get_miss" time="0.010" />
+  <testcase classname="tests.test_cache" name="test_set_ttl" time="0.019" />
+  <testcase classname="tests.test_cache" name="test_lru_order" time="0.028" />
+  <testcase classname="tests.test_report" name="test_export_csv" time="0.875" />
+  <testcase classname="tests.test_report" name="test_export_pdf" time="1.427" />
+  <testcase classname="tests.test_report" name="test_render_table" time="0.050" />
+  <testcase classname="tests.test_report" name="test_column_alias" time="0.054" />
+  <testcase classname="tests.test_auth" name="test_legacy_login" time="0.371" />
+  <testcase classname="tests.test_auth" name="test_login_success" time="0.095" />
+  <testcase classname="tests.test_auth" name="test_login_bad_password" time="0.072" />
+  <testcase classname="tests.test_auth" name="test_token_refresh" time="0.110" />
+  <testcase classname="tests.test_auth" name="test_logout" time="0.046" />
+  <testcase classname="tests.test_metrics" name="test_flush_metrics" time="0.882" />
+  <testcase classname="tests.test_metrics" name="test_counter_inc" time="0.010" />
+  <testcase classname="tests.test_metrics" name="test_histogram_buckets" time="0.021" />
+  <testcase classname="tests.test_metrics" name="test_gauge_reset" time="0.020" />
+  <testcase classname="tests.test_db" name="test_migration_idempotent" time="2.415" />
+  <testcase classname="tests.test_db" name="test_transaction_rollback" time="0.402" />
+</testsuite>

@@ -1,0 +1,51 @@
+name: Bug report
+description: Something produced a wrong number, crashed, or refused a valid file.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please paste the exact command, the flaky-hunter version and the smallest
+        input file that reproduces the problem. Never attach secrets.
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The exact command you ran.
+      placeholder: flaky-hunter analyze ci-results/ --min-runs 10
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Include the full stderr output; the tool never prints a traceback on its own.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: flaky-hunter version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and OS
+      placeholder: "3.12.10 on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input
+      description: Paste a few lines of the result file that triggers the problem.
+      render: xml

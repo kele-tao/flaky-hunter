@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-11-23T08:05:10Z",
+  "environment": {
+    "platform": "Windows 11",
+    "python": "3.12.10",
+    "machine": "AMD64"
+  },
+  "corpora": [
+    {
+      "runs": 40,
+      "results": 1000,
+      "tests": 25,
+      "flaky": 4,
+      "parse_and_analyse_seconds": 0.0324,
+      "median_seconds": 0.04,
+      "results_per_second": 30875,
+      "report_seconds": {
+        "json": 0.0039,
+        "markdown": 0.0003,
+        "html": 0.0011
+      },
+      "name": "example-40x25"
+    },
+    {
+      "runs": 200,
+      "results": 5000,
+      "tests": 25,
+      "flaky": 4,
+      "parse_and_analyse_seconds": 0.1784,
+      "median_seconds": 0.1799,
+      "results_per_second": 28023,
+      "report_seconds": {
+        "json": 0.0072,
+        "markdown": 0.0005,
+        "html": 0.0023
+      },
+      "name": "medium-200x25"
+    },
+    {
+      "runs": 1000,
+      "results": 25000,
+      "tests": 25,
+      "flaky": 4,
+      "parse_and_analyse_seconds": 1.3599,
+      "median_seconds": 1.6211,
+      "results_per_second": 18383,
+      "report_seconds": {
+        "json": 0.0405,
+        "markdown": 0.0023,
+        "html": 0.0174
+      },
+      "name": "large-1000x25"
+    }
+  ],
+  "logs": [
+    {
+      "result_lines": 50000,
+      "file_mb": 2.62,
+      "tests": 120,
+      "parse_and_analyse_seconds": 0.7015,
+      "median_seconds": 0.7142,
+      "results_per_second": 71272
+    },
+    {
+      "result_lines": 100000,
+      "file_mb": 5.24,
+      "tests": 120,
+      "parse_and_analyse_seconds": 1.0618,
+      "median_seconds": 1.1109,
+      "results_per_second": 94178
+    }
+  ],
+  "wall_seconds": 16.43
+}

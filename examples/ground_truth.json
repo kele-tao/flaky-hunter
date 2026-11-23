@@ -1,0 +1,46 @@
+{
+  "generator": "benchmarks/gen_results.py",
+  "seed": 20260105,
+  "runs": 40,
+  "tests": 25,
+  "labels": {
+    "truly_flaky": [
+      "tests/test_api.py::test_fetch_times_out",
+      "tests/test_api.py::test_retry_after_timeout",
+      "tests/test_cache.py::test_eviction_race"
+    ],
+    "regressed": [
+      "tests/test_report.py::test_export_csv"
+    ],
+    "fixed": [
+      "tests/test_auth.py::test_legacy_login"
+    ],
+    "explained_by_shared_outage": [
+      "tests/test_metrics.py::test_flush_metrics"
+    ],
+    "single_failure": [
+      "tests/test_metrics.py::test_gauge_reset"
+    ],
+    "stable": [
+      "tests/test_api.py::test_health_ok",
+      "tests/test_api.py::test_pagination",
+      "tests/test_api.py::test_rate_limit",
+      "tests/test_api.py::test_upload_chunked",
+      "tests/test_cache.py::test_get_miss",
+      "tests/test_cache.py::test_set_ttl",
+      "tests/test_cache.py::test_lru_order",
+      "tests/test_report.py::test_export_pdf",
+      "tests/test_report.py::test_render_table",
+      "tests/test_report.py::test_column_alias",
+      "tests/test_auth.py::test_login_success",
+      "tests/test_auth.py::test_login_bad_password",
+      "tests/test_auth.py::test_token_refresh",
+      "tests/test_auth.py::test_logout",
+      "tests/test_metrics.py::test_counter_inc",
+      "tests/test_metrics.py::test_histogram_buckets",
+      "tests/test_db.py::test_migration_idempotent",
+      "tests/test_db.py::test_transaction_rollback"
+    ]
+  },
+  "notes": "test_flush_metrics fails in exactly the runs where test_eviction_race fails (jaccard 1.00). It is labelled explained_by_shared_outage, so a quarantine list that includes it is a false positive: the tool cannot tell a symptom from an independent flake using per-test statistics, which is why the correlated-failure section exists."
+}

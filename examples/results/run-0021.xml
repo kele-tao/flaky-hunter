@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="pytest" tests="25" failures="1" timestamp="2026-01-21T09:20:00Z">
+  <testcase classname="tests.test_api" name="test_fetch_times_out" time="30.817">
+    <failure message="socket.timeout: connection to api.internal:8443/v2/items timed out after 30.0s">socket.timeout: connection to api.internal:8443/v2/items timed out after 30.0s
+  (see logs/ci-21.txt)</failure>
+  </testcase>
+  <testcase classname="tests.test_api" name="test_retry_after_timeout" time="3.116" />
+  <testcase classname="tests.test_api" name="test_health_ok" time="0.040" />
+  <testcase classname="tests.test_api" name="test_pagination" time="0.128" />
+  <testcase classname="tests.test_api" name="test_rate_limit" time="0.204" />
+  <testcase classname="tests.test_api" name="test_upload_chunked" time="1.309" />
+  <testcase classname="tests.test_cache" name="test_eviction_race" time="0.420" />
+  <testcase classname="tests.test_cache" name="test_get_miss" time="0.011" />
+  <testcase classname="tests.test_cache" name="test_set_ttl" time="0.018" />
+  <testcase classname="tests.test_cache" name="test_lru_order" time="0.028" />
+  <testcase classname="tests.test_report" name="test_export_csv" time="0.876" />
+  <testcase classname="tests.test_report" name="test_export_pdf" time="1.301" />
+  <testcase classname="tests.test_report" name="test_render_table" time="0.052" />
+  <testcase classname="tests.test_report" name="test_column_alias" time="0.057" />
+  <testcase classname="tests.test_auth" name="test_legacy_login" time="0.340" />
+  <testcase classname="tests.test_auth" name="test_login_success" time="0.097" />
+  <testcase classname="tests.test_auth" name="test_login_bad_password" time="0.084" />
+  <testcase classname="tests.test_auth" name="test_token_refresh" time="0.120" />
+  <testcase classname="tests.test_auth" name="test_logout" time="0.054" />
+  <testcase classname="tests.test_metrics" name="test_flush_metrics" time="0.947" />
+  <testcase classname="tests.test_metrics" name="test_counter_inc" time="0.011" />
+  <testcase classname="tests.test_metrics" name="test_histogram_buckets" time="0.021" />
+  <testcase classname="tests.test_metrics" name="test_gauge_reset" time="0.019" />
+  <testcase classname="tests.test_db" name="test_migration_idempotent" time="2.625" />
+  <testcase classname="tests.test_db" name="test_transaction_rollback" time="0.411" />
+</testsuite>

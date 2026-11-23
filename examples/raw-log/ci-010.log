@@ -1,0 +1,31 @@
+$ pytest -v --tb=line
+platform win32 -- Python 3.12.10 -- pytest-8.3.4
+collected 25 items
+
+[gw0] [  4%] PASSED tests/test_api.py::test_fetch_times_out
+[gw0] [  8%] FAILED tests/test_api.py::test_retry_after_timeout - socket.timeout: connection to api.internal:8443/v2/items timed out after 30.0s
+[gw0] [ 12%] PASSED tests/test_api.py::test_health_ok
+[gw0] [ 16%] PASSED tests/test_api.py::test_pagination
+[gw0] [ 20%] PASSED tests/test_api.py::test_rate_limit
+[gw0] [ 24%] PASSED tests/test_api.py::test_upload_chunked
+[gw0] [ 28%] PASSED tests/test_cache.py::test_eviction_race
+[gw0] [ 32%] PASSED tests/test_cache.py::test_get_miss
+[gw0] [ 36%] PASSED tests/test_cache.py::test_set_ttl
+[gw0] [ 40%] PASSED tests/test_cache.py::test_lru_order
+[gw0] [ 44%] PASSED tests/test_report.py::test_export_csv
+[gw0] [ 48%] PASSED tests/test_report.py::test_export_pdf
+[gw0] [ 52%] PASSED tests/test_report.py::test_render_table
+[gw0] [ 56%] PASSED tests/test_report.py::test_column_alias
+[gw0] [ 60%] PASSED tests/test_auth.py::test_legacy_login
+[gw0] [ 64%] PASSED tests/test_auth.py::test_login_success
+[gw0] [ 68%] PASSED tests/test_auth.py::test_login_bad_password
+[gw0] [ 72%] PASSED tests/test_auth.py::test_token_refresh
+[gw0] [ 76%] PASSED tests/test_auth.py::test_logout
+[gw0] [ 80%] PASSED tests/test_metrics.py::test_flush_metrics
+[gw0] [ 84%] PASSED tests/test_metrics.py::test_counter_inc
+[gw0] [ 88%] PASSED tests/test_metrics.py::test_histogram_buckets
+[gw0] [ 92%] PASSED tests/test_metrics.py::test_gauge_reset
+[gw0] [ 96%] PASSED tests/test_db.py::test_migration_idempotent
+[gw0] [100%] PASSED tests/test_db.py::test_transaction_rollback
+
+===== 1 failed, 24 passed in 12.4s =====
